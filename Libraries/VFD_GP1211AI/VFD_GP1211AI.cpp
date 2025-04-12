@@ -298,7 +298,7 @@ void VFD_GP1211AI::fillScreen(uint16_t color)
     memset(_framebuffer, color, sizeof(_framebuffer));
 }
 
-void VFD_GP1211AI::display(void)
+void VFD_GP1211AI::display()
 {
     uint8_t i = 0;
     uint8_t grid;
@@ -395,7 +395,7 @@ void VFD_GP1211AI::display(void)
     }
 }
 
-void VFD_GP1211AI::timerHandler(void)
+void VFD_GP1211AI::timerHandler()
 {
     uint8_t cycle_cnt = 48;
 

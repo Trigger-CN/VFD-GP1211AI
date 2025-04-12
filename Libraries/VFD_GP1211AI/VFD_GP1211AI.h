@@ -47,15 +47,15 @@ public:
     {
         fillScreen(BLACK);
     }
-    void display(void);
+    void display();
 
-    void timerHandler(void);
+    void timerHandler();
     void setBrightness(uint16_t brightness)
     {
         _brightness = brightness;
         analogWrite(_bk_pin, 255 - _brightness);
     }
-    uint16_t getBrightness(void) { return _brightness; }
+    uint16_t getBrightness() { return _brightness; }
 
 private:
     uint8_t _bk_pin;
