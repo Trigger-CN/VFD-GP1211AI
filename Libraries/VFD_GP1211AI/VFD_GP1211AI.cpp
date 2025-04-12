@@ -314,7 +314,7 @@ void VFD_GP1211AI::display(void)
 
         ram_base_addr = (grid_tmp >> 1) * 6;
         for (i = 0; i < 8; i++) {
-            if (grid_tmp & 0x01) //双数列
+            if (grid_tmp & 0x01) // Even number series
             {
                 ram_tmp = ((_framebuffer[i][ram_base_addr + 5] << 1) & 0x02);
                 ram_tmp |= ((_framebuffer[i][ram_base_addr + 4] << 3) & 0x08);
@@ -352,7 +352,7 @@ void VFD_GP1211AI::display(void)
                 ram_tmp |= _framebuffer[i][ram_base_addr + 3] & 0x80;
                 *buf_ptr = ram_tmp;
                 ++buf_ptr;
-            } else //单数列
+            } else // Odd number series
             {
                 ram_tmp = _framebuffer[i][ram_base_addr + 0] & 0x01;
                 ram_tmp |= (_framebuffer[i][ram_base_addr + 1] << 2 & 0x04);
