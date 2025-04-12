@@ -43,7 +43,12 @@ public:
     virtual void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
     virtual void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
     virtual void fillScreen(uint16_t color);
-    void updateBuffer(void);
+    void clearDisplay()
+    {
+        fillScreen(BLACK);
+    }
+    void display(void);
+
     void timerHandler(void);
     void setBrightness(uint16_t brightness)
     {

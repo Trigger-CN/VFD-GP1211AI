@@ -298,7 +298,7 @@ void VFD_GP1211AI::fillScreen(uint16_t color)
     memset(_framebuffer, color, sizeof(_framebuffer));
 }
 
-void VFD_GP1211AI::updateBuffer(void)
+void VFD_GP1211AI::display(void)
 {
     uint8_t i = 0;
     uint8_t grid;
